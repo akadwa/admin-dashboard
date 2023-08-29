@@ -1,0 +1,259 @@
+@import "defaults";
+@import "variables";
+@import "mixins";
+
+
+body {
+  display: grid;
+  grid-template: auto 4fr / 1fr 4fr;
+
+  font-family: $main-font;
+  font-weight: $heavy;
+}
+
+
+nav {
+  grid-row: 1 / 3;
+  background-color: $brown;
+  color: $cream;
+  font-size: $nav-font-size;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 2.5rem;
+
+  img {
+    margin-right: 0.6rem;
+    filter: brightness(0) saturate(100%) invert(83%) sepia(26%) saturate(320%) hue-rotate(341deg) brightness(101%) contrast(95%);
+    @include image-resize(2rem, auto);
+  }
+
+  .title {
+    font-size: $title-font-size;
+    letter-spacing: 0.5rem
+  }
+
+  .nav-link-container {
+    .nav-link {
+      @include flex-align;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+}
+
+header {
+  background-color: $cream;
+  color: $brown;
+  padding: 1.5rem 3rem;
+
+  display: grid;
+  grid-template: auto 1fr / 3fr auto 1fr;
+  gap: 1.3rem;
+
+
+  div {
+    @include flex-align;
+  }
+
+  .search-actions {
+    img {
+      filter: invert(22%) sepia(62%) saturate(921%) hue-rotate(342deg) brightness(96%) contrast(92%);
+    }
+
+    .search-area {
+      height: 2rem;
+      width: 100%;
+      background-color: $brown;
+      opacity: 70%;
+      margin-left: 0.5rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .notifications-icon {
+    margin-left: 13rem;
+    margin-right: 1.5rem;
+
+    img {
+      filter: invert(22%) sepia(62%) saturate(921%) hue-rotate(342deg) brightness(96%) contrast(92%);
+    }
+  }
+
+  .user-profile {
+    img {
+      @include image-resize(3rem, auto);
+      border-radius: 50%;
+    }
+
+    .user-name {
+      margin-left: 1rem;
+      font-size: calc($header-font-size + 0.5rem);
+    }
+  }
+
+  .welcome-user {
+    img {
+      @include image-resize(4.5rem, auto);
+      border-radius: 50%;
+    }
+
+    .welcome-message {
+      margin: 0 0.7rem 0 1.5rem;
+      font-size: $header-font-size;
+    }
+
+    .welcome-user-name {
+      font-size: calc($header-font-size + 1.2rem);
+    }
+  }
+
+  .user-profile-actions {
+    grid-column: 2 / 4;
+
+    justify-content: space-around;
+    font-size: $header-font-size;
+    color: $cream;
+
+    .action {
+      display: block;
+      background-color: $brown;
+      width: 20%;
+      text-align: center;
+      border-radius: 2rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 1.5rem;
+  gap: 1rem;
+
+  background-color: $grey;
+  color: $brown;
+
+  .projects {
+    display: grid;
+    grid-template-rows: 4rem auto;
+
+    .header {
+      font-size: calc($header-font-size + 0.3rem);
+      letter-spacing: 0.5rem;
+      text-align: center;
+    }
+
+    .project-items-container {
+      display: grid;
+      grid-template: repeat(3, auto) / repeat(2, 1fr);
+      gap: 1.5rem;
+
+      .project-item {
+        background-color: $cream;
+        padding: 1rem 2rem;
+        font-size: $project-item-font-size;
+        position: relative;
+
+        .project-name {
+          font-size: calc($project-item-font-size + 0.7rem);
+          border-bottom: 0.15rem solid $brown;
+        }
+
+        .project-description {
+          padding: 1rem 0 1.5rem;
+          font-family: $sub-font;
+          font-weight: $light;
+        }
+
+        .project-actions {
+          display: flex;
+          position: absolute;
+          bottom: 1rem;
+          right: 2rem;
+
+          img {
+            @include image-resize(1.5rem, auto);
+            filter: invert(22%) sepia(62%) saturate(921%) hue-rotate(342deg) brightness(96%) contrast(92%);
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+
+  .announcements-and-trending {
+    display: grid;
+    grid-template-rows: auto auto;
+    padding-right: 2rem;
+    gap: 1rem;
+    font-size: $announcement-font-size;
+
+    .announcements {
+      display: grid;
+      grid-template-rows: 4rem auto;
+
+      .header {
+        font-size: calc($header-font-size + 0.3rem);
+        letter-spacing: 0.5rem;
+        text-align: center;
+      }
+
+      .announcement-item {
+        background-color: $cream;
+        padding: 1rem 2rem;
+        font-size: $project-item-font-size;
+      }
+
+      .announcement-name {
+        font-size: calc($project-item-font-size + 0.7rem);
+        border-bottom: 0.15rem solid $brown;
+      }
+
+      .announcement-description {
+        font-family: $sub-font;
+        font-weight: $light;
+        font-size: $trending-font-size
+      }
+    }
+
+    .trending {
+      display: grid;
+      grid-template-rows: 4rem auto;
+
+      .header {
+        font-size: calc($header-font-size + 0.3rem);
+        letter-spacing: 0.5rem;
+        text-align: center;
+      }
+
+      .trending-item {
+        background-color: $cream;
+        padding: 0.5rem 2rem;
+        font-size: $project-item-font-size;
+        @include flex-align;
+
+        .trending-profile-handle-name-container {
+          padding: 0 0.75rem;
+
+          .trending-profile-handle {
+            font-size: calc($trending-font-size + 0.7vw);
+          }
+
+          .trending-profile-name {
+            font-size: calc($trending-font-size + 0.2vw);
+          }
+        }
+
+        img {
+          @include image-resize(2.5rem, 2.5rem);
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

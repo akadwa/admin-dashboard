@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Andika:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: grid;
+  grid-template: auto 4fr/1fr 4fr;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+}
+
+nav {
+  grid-row: 1/3;
+  background-color: rgb(119, 56, 25);
+  color: rgb(248, 214, 184);
+  font-size: calc(1rem + 0.8vw);
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 2.5rem;
+}
+nav img {
+  margin-right: 0.6rem;
+  filter: brightness(0) saturate(100%) invert(83%) sepia(26%) saturate(320%) hue-rotate(341deg) brightness(101%) contrast(95%);
+  width: 2rem;
+  height: auto;
+}
+nav .title {
+  font-size: calc(1.5rem + 1.2vw);
+  letter-spacing: 0.5rem;
+}
+nav .nav-link-container .nav-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.2rem;
+}
+
+header {
+  background-color: rgb(248, 214, 184);
+  color: rgb(119, 56, 25);
+  padding: 1.5rem 3rem;
+  display: grid;
+  grid-template: auto 1fr/3fr auto 1fr;
+  gap: 1.3rem;
+}
+header div {
+  display: flex;
+  align-items: center;
+}
+header .search-actions img {
+  filter: invert(22%) sepia(62%) saturate(921%) hue-rotate(342deg) brightness(96%) contrast(92%);
+}
+header .search-actions .search-area {
+  height: 2rem;
+  width: 100%;
+  background-color: rgb(119, 56, 25);
+  opacity: 70%;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+}
+header .notifications-icon {
+  margin-left: 13rem;
+  margin-right: 1.5rem;
+}
+header .notifications-icon img {
+  filter: invert(22%) sepia(62%) saturate(921%) hue-rotate(342deg) brightness(96%) contrast(92%);
+}
+header .user-profile img {
+  width: 3rem;
+  height: auto;
+  border-radius: 50%;
+}
+header .user-profile .user-name {
+  margin-left: 1rem;
+  font-size: calc(0.7rem + 0.7vw + 0.5rem);
+}
+header .welcome-user img {
+  width: 4.5rem;
+  height: auto;
+  border-radius: 50%;
+}
+header .welcome-user .welcome-message {
+  margin: 0 0.7rem 0 1.5rem;
+  font-size: calc(0.7rem + 0.7vw);
+}
+header .welcome-user .welcome-user-name {
+  font-size: calc(0.7rem + 0.7vw + 1.2rem);
+}
+header .user-profile-actions {
+  grid-column: 2/4;
+  justify-content: space-around;
+  font-size: calc(0.7rem + 0.7vw);
+  color: rgb(248, 214, 184);
+}
+header .user-profile-actions .action {
+  display: block;
+  background-color: rgb(119, 56, 25);
+  width: 20%;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 1.5rem;
+  gap: 1rem;
+  background-color: rgb(219, 227, 212);
+  color: rgb(119, 56, 25);
+}
+section .projects {
+  display: grid;
+  grid-template-rows: 4rem auto;
+}
+section .projects .header {
+  font-size: calc(0.7rem + 0.7vw + 0.3rem);
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+section .projects .project-items-container {
+  display: grid;
+  grid-template: repeat(3, auto)/repeat(2, 1fr);
+  gap: 1.5rem;
+}
+section .projects .project-items-container .project-item {
+  background-color: rgb(248, 214, 184);
+  padding: 1rem 2rem;
+  font-size: calc(0.3rem + 0.4vw);
+  position: relative;
+}
+section .projects .project-items-container .project-item .project-name {
+  font-size: calc(0.3rem + 0.4vw + 0.7rem);
+  border-bottom: 0.15rem solid rgb(119, 56, 25);
+}
+section .projects .project-items-container .project-item .project-description {
+  padding: 1rem 0 1.5rem;
+  font-family: "Andika", sans-serif;
+  font-weight: 400;
+}
+section .projects .project-items-container .project-item .project-actions {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+}
+section .projects .project-items-container .project-item .project-actions img {
+  width: 1.5rem;
+  height: auto;
+  filter: invert(22%) sepia(62%) saturate(921%) hue-rotate(342deg) brightness(96%) contrast(92%);
+  margin-left: 0.5rem;
+}
+section .announcements-and-trending {
+  display: grid;
+  grid-template-rows: auto auto;
+  padding-right: 2rem;
+  gap: 1rem;
+  font-size: calc(0.3rem + 0.4vw);
+}
+section .announcements-and-trending .announcements {
+  display: grid;
+  grid-template-rows: 4rem auto;
+}
+section .announcements-and-trending .announcements .header {
+  font-size: calc(0.7rem + 0.7vw + 0.3rem);
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+section .announcements-and-trending .announcements .announcement-item {
+  background-color: rgb(248, 214, 184);
+  padding: 1rem 2rem;
+  font-size: calc(0.3rem + 0.4vw);
+}
+section .announcements-and-trending .announcements .announcement-name {
+  font-size: calc(0.3rem + 0.4vw + 0.7rem);
+  border-bottom: 0.15rem solid rgb(119, 56, 25);
+}
+section .announcements-and-trending .announcements .announcement-description {
+  font-family: "Andika", sans-serif;
+  font-weight: 400;
+  font-size: calc(0.2rem + 0.4vw);
+}
+section .announcements-and-trending .trending {
+  display: grid;
+  grid-template-rows: 4rem auto;
+}
+section .announcements-and-trending .trending .header {
+  font-size: calc(0.7rem + 0.7vw + 0.3rem);
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+section .announcements-and-trending .trending .trending-item {
+  background-color: rgb(248, 214, 184);
+  padding: 0.5rem 2rem;
+  font-size: calc(0.3rem + 0.4vw);
+  display: flex;
+  align-items: center;
+}
+section .announcements-and-trending .trending .trending-item .trending-profile-handle-name-container {
+  padding: 0 0.75rem;
+}
+section .announcements-and-trending .trending .trending-item .trending-profile-handle-name-container .trending-profile-handle {
+  font-size: calc(0.2rem + 0.4vw + 0.7vw);
+}
+section .announcements-and-trending .trending .trending-item .trending-profile-handle-name-container .trending-profile-name {
+  font-size: calc(0.2rem + 0.4vw + 0.2vw);
+}
+section .announcements-and-trending .trending .trending-item img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

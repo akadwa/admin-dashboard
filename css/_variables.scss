@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Andika:wght@400;700&display=swap');
+
+// Font styles
+$main-font: 'Amatic SC', cursive;
+$sub-font: 'Andika', sans-serif;
+
+// Font weights
+$heavy: 700;
+$light: 400;
+
+// Font sizes
+$title-font-size: calc(1.5rem + 1.2vw);
+$nav-font-size: calc(1rem + 0.8vw);
+
+$header-font-size: calc(0.7rem + 0.7vw);
+
+$project-item-font-size: calc(0.3rem + 0.4vw);
+$announcement-font-size: calc(0.3rem + 0.4vw);
+$trending-font-size: calc(0.2rem + 0.4vw);
+
+// Colors
+$cream: rgb(248, 214, 184);
+$brown: rgb(119, 56, 25);
+$grey: rgb(219, 227, 212);
